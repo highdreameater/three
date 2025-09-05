@@ -1,6 +1,8 @@
 // 🌐 OLD: import * as THREE from 'three';
 // ✅ NEW: Import directly from the module file being served
-import * as THREE from '/scripts/three.module.js';
+import * as THREE from 'three';
+
+// ... rest of your code
 
 // 1. Scene
 const scene = new THREE.Scene();
@@ -32,7 +34,7 @@ window.addEventListener('resize', () => {
 function animate() {
     requestAnimationFrame(animate);
 
-    cube.rotation.x += 0.005;
+    cube.rotation.x += 0.1;
     cube.rotation.y += 0.005;
 
     renderer.render(scene, camera);
