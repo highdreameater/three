@@ -1,0 +1,18 @@
+# Netlify Build Configuration
+# This file tells Netlify how to deploy your site.
+
+[build]
+  # Build command: We don't have one since our site is static HTML/JS.
+  # You can leave this blank or add a comment command like below.
+  command = ""
+
+  # Publish directory: This is the MOST IMPORTANT setting.
+  # It tells Netlify where your final website files are located.
+  publish = "three/public"
+
+# Optional: Redirects rule to ensure all paths lead to index.html
+# Useful for single-page applications, but good to have.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
